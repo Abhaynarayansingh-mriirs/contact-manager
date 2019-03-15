@@ -2,18 +2,18 @@
 			var contacts = [];
 			
 			function add(){
-				var name = document.getElementById("namez").value;
-				var Phone_no = document.getElementById("Phone_no").value;
+				var name = document.getElementById("input").value;
+				var Phone_no = document.getElementById("input1").value;
 				var newContact = {
 					newName : name,
-					Phone_no : Phone_no
+					newPhone_no : Phone_no
 				}
 				contacts.push(newContact);
 				
 				updateDiv();
 				
-				document.getElementById("namez").value = "";
-				document.getElementById("Phone_no").value = "";
+				document.getElementById("input").value = "";
+				document.getElementById("input1").value = "";
 				
 			}
 			
@@ -32,21 +32,22 @@
 				updateDiv();
 			}
 
+            document.getElementById('input').addEventListener("keyup", myFunction);
 
-
-document.getElementById('namez').addEventListener("keyup", myFunction);
-
-var inputBox = document.getElementById('namez');
-
-function myFunction(){
-    document.getElementById('output').innerHTML = inputBox.value;
-}
-//////////////////////////////////////////////////////////////////////////////
-document.getElementById('Phone_no').addEventListener("keyup", myFunction1);
-
-var inputbox = document.getElementById('Phone_no');
-
-function myFunction1(){
-    document.getElementById('output1').innerHTML = inputbox.value;
-}
-	
+            var inputBox = document.getElementById('input');
+            
+            function myFunction(){
+                document.getElementById('output').innerHTML = inputBox.value;
+            }
+            ///////////////////////////////////////
+            document.getElementById('input1').addEventListener("keyup", myFunction1);
+            
+            var inputbox = document.getElementById('input1');
+            
+            function myFunction1(){
+                document.getElementById('output1').innerHTML = inputbox.value;
+            }
+            
+            
+            
+            
