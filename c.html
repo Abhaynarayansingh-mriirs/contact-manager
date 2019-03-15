@@ -1,23 +1,39 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<style>
+	.top {
+  height: 40vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.jpg);
+  background-size: contain;
+  position: relative;
+  opacity: 0.8;
+}
+h1{
+ color:white;
+}
+		
+		</style>
 	</head>
 	<body>
+		<div class="top">
+		<div class="ui container">
+		
 		<h1>Contact manager</h1>
-		<input placeholder="Name" id="namez"><br><br>
-		<input placeholder="Phone_no" id="Phone_no"><br><br>
-		<button onclick="add()" >Add</button>
-		
+
+		<div class="ui massive input focus">
+			<input type="text" placeholder="Name" id="namez">
+		</div>
 		<br><br><br>
-		Name:
-		<p id="output"> </p>
-		<br>
-		Phone no:
-<p id="output1"></p>
+		<div class="ui massive input">
+		<input type="text" placeholder="Phone No" id="Phone_no">
+		</div>
+		<br><br><br>
+		<button class="ui primary button" onclick="add()">ADD</button>
 		
-		<div id="contacts"></div>
-		
+	</div>
+</div>
 		<script src="sec.js"></script>
 	</body>
 </html>
